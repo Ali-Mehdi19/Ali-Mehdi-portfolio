@@ -67,32 +67,54 @@
        HERO SECTION — Full-bleed background image
        ============================================ -->
   <section class="hero" id="home">
-    <!-- Background image with fog mask -->
-    <div class="hero-bg-image">
-      <img src="assets/images/hero-avatar.png" alt="Ali Mehdi - Full Stack AI/ML Developer" loading="eager">
-    </div>
+    <!-- Animated dot grid background -->
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
 
-    <!-- Floating badges -->
-    <div class="hero-float-badge badge-1">
-      <i data-lucide="brain" style="width:16px;height:16px;margin-right:6px;vertical-align:middle"></i>
-      AI / ML
-    </div>
-    <div class="hero-float-badge badge-2">
-      <i data-lucide="code-2" style="width:16px;height:16px;margin-right:6px;vertical-align:middle"></i>
-      Full Stack
+    <!-- Decorative code lines (floating) -->
+    <div class="hero-code-lines">
+      <span class="code-line line-1"><span class="code-kw">const</span> <span class="code-var">developer</span> = <span class="code-str">"Ali Mehdi"</span>;</span>
+      <span class="code-line line-2"><span class="code-kw">let</span> <span class="code-var">passion</span> = [<span class="code-str">"AI"</span>, <span class="code-str">"Web"</span>, <span class="code-str">"Mobile"</span>];</span>
+      <span class="code-line line-3"><span class="code-kw">while</span>(<span class="code-var">alive</span>) { <span class="code-fn">code</span>(); }</span>
     </div>
 
     <div class="container">
       <div class="hero-content">
-        <p class="hero-greeting">👋 Hello, I'm</p>
+        <!-- Terminal-style header bar -->
+        <div class="terminal-bar">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">~/ali-mehdi/portfolio</span>
+        </div>
+
+        <p class="hero-greeting">
+          <span class="code-comment">// Hello world, I'm</span>
+        </p>
         <h1 class="hero-name">
           <span class="highlight">ALI MEHDI</span>
         </h1>
         <div class="hero-role-wrapper">
           <p class="hero-role">
-            <span id="typingText"></span><span class="cursor"></span>
+            <span class="code-prompt">&gt;</span> <span id="typingText"></span><span class="cursor"></span>
           </p>
         </div>
+
+        <!-- Quick stat pills -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <i data-lucide="brain" style="width:16px;height:16px"></i>
+            AI / ML
+          </div>
+          <div class="hero-stat">
+            <i data-lucide="code-2" style="width:16px;height:16px"></i>
+            Full Stack
+          </div>
+          <div class="hero-stat">
+            <i data-lucide="smartphone" style="width:16px;height:16px"></i>
+            Mobile Dev
+          </div>
+        </div>
+
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">
             <i data-lucide="folder-open" style="width:18px;height:18px"></i>
@@ -103,6 +125,14 @@
             Contact Me
           </a>
         </div>
+      </div>
+    </div>
+
+    <!-- Open to Work badge at bottom center -->
+    <div class="hero-open-to-work">
+      <div class="open-to-work">
+        <span class="dot"></span>
+        Open to Work
       </div>
     </div>
   </section>
@@ -133,10 +163,6 @@
           <p>
             Currently focused on pushing the boundaries of <strong>AI-driven applications</strong> and exploring cutting-edge research in deep learning, transformer architectures, and autonomous systems.
           </p>
-        </div>
-        <div class="open-to-work">
-          <span class="dot"></span>
-          Open to Work
         </div>
       </div>
     </div>

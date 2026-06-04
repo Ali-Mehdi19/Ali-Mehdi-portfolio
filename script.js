@@ -202,19 +202,157 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // PARALLAX EFFECT ON HERO BG IMAGE
+  // HERO CANVAS - Interactive Particle Grid
   // ==========================================
-  const heroBgImage = document.querySelector('.hero-bg-image');
-  if (heroBgImage) {
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const heroHeight = document.querySelector('.hero').offsetHeight;
-      if (scrollY < heroHeight) {
-        const parallaxOffset = scrollY * 0.3;
-        heroBgImage.style.transform = `translateY(${parallaxOffset}px)`;
+  function initHeroCanvas() {
+    const canvas = document.getElementById('heroCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const heroSection = document.getElementById('home');
+    let particles = [];
+    let mouse = { x: null, y: null, active: false };
+    let animationFrameId = null;
+
+    function resizeCanvas() {
+      canvas.width = heroSection.clientWidth;
+      canvas.height = heroSection.clientHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Track mouse
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.active = true;
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+      mouse.active = false;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3;
+        this.radius = Math.random() * 1.5 + 1.5;
+        this.colorType = Math.random() > 0.55 ? 1 : 0; // 0 = blue, 1 = orange
       }
-    }, { passive: true });
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Wrap around boundaries
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+      }
+
+      draw(colors) {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.colorType === 0 ? colors.primary + '0.2)' : colors.secondary + '0.2)';
+        ctx.fill();
+      }
+    }
+
+    function getColors() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      return {
+        primary: isDark ? 'rgba(59, 130, 246, ' : 'rgba(37, 99, 235, ',
+        secondary: 'rgba(249, 115, 22, ',
+        line: isDark ? 'rgba(59, 130, 246, 0.05)' : 'rgba(37, 99, 235, 0.05)'
+      };
+    }
+
+    function initParticles() {
+      particles = [];
+      const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 18000));
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+    initParticles();
+    window.addEventListener('resize', initParticles);
+
+    function tick() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const colors = getColors();
+
+      // Update and draw particles
+      particles.forEach(p => {
+        p.update();
+        p.draw(colors);
+      });
+
+      // Draw lines between close particles
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 100) {
+            const alpha = (1 - dist / 100) * 0.07;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = particles[i].colorType === 0 ? colors.primary + `${alpha})` : colors.secondary + `${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw lines to mouse
+      if (mouse.active) {
+        particles.forEach(p => {
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 130) {
+            const alpha = (1 - dist / 130) * 0.15;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = p.colorType === 0 ? colors.primary + `${alpha})` : colors.secondary + `${alpha})`;
+            ctx.lineWidth = 1.2;
+            ctx.stroke();
+          }
+        });
+      }
+
+      animationFrameId = requestAnimationFrame(tick);
+    }
+
+    // Only animate when visible using IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (!animationFrameId) {
+            tick();
+          }
+        } else {
+          if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+          }
+        }
+      });
+    }, { threshold: 0 });
+
+    observer.observe(heroSection);
   }
+
+  // Initialize Canvas Particles
+  initHeroCanvas();
 
   // ==========================================
   // SKILL BADGE HOVER — maintain text color for light-bg brands
