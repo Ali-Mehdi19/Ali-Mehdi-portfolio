@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Mehdi Nadoliya — Full Stack AI/ML Developer</title>
+  <meta name="description" content="Portfolio of Ali Mehdi Nadoliya, Full Stack Developer specializing in AI/ML, Web Development, and Cross-Platform Mobile Apps. Building intelligent solutions with cutting-edge technology.">
+  <meta name="keywords" content="Ali Mehdi, Full Stack Developer, AI Developer, ML Engineer, React Native, FastAPI, Python">
+  <meta name="author" content="Ali Mehdi Nadoliya">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <div class="nav-logo">
+        <span class="logo-bracket">&lt;</span><span class="logo-name">AM</span><span class="logo-bracket">/&gt;</span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active" data-section="home">Home</a></li>
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="theme-toggle-wrapper">
+        <div class="theme-toggle-group">
+          <button class="theme-toggle-btn" data-theme-option="light" title="Light mode" aria-label="Light mode">
+            <i data-lucide="sun" style="width:18px;height:18px"></i>
+          </button>
+          <button class="theme-toggle-btn" data-theme-option="dark" title="Dark mode" aria-label="Dark mode">
+            <i data-lucide="moon" style="width:18px;height:18px"></i>
+          </button>
+          <button class="theme-toggle-btn active" data-theme-option="system" title="System" aria-label="System preference">
+            <i data-lucide="monitor" style="width:18px;height:18px"></i>
+          </button>
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION — Full-bleed background image
+       ============================================ -->
+  <section class="hero" id="home">
+    <!-- Background image with fog mask -->
+    <div class="hero-bg-image">
+      <img src="assets/images/hero-avatar.png" alt="Ali Mehdi - Full Stack AI/ML Developer" loading="eager">
+    </div>
+
+    <!-- Floating badges -->
+    <div class="hero-float-badge badge-1">
+      <i data-lucide="brain" style="width:16px;height:16px;margin-right:6px;vertical-align:middle"></i>
+      AI / ML
+    </div>
+    <div class="hero-float-badge badge-2">
+      <i data-lucide="code-2" style="width:16px;height:16px;margin-right:6px;vertical-align:middle"></i>
+      Full Stack
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">
+          <span class="highlight">ALI MEHDI</span>
+        </h1>
+        <div class="hero-role-wrapper">
+          <p class="hero-role">
+            <span id="typingText"></span><span class="cursor"></span>
+          </p>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="folder-open" style="width:18px;height:18px"></i>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i data-lucide="mail" style="width:18px;height:18px"></i>
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT SECTION
+       ============================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-image-col reveal-left">
+        <div class="about-image-wrapper">
+          <img src="assets/images/about-image.png" alt="AI and Technology" loading="lazy">
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <h2>About <span class="accent">Me</span></h2>
+        <div class="about-text">
+          <p>
+            I'm a passionate <strong>Full Stack Developer & AI/ML Engineer</strong> with a deep expertise in building end-to-end intelligent applications. From crafting beautiful, responsive frontends to architecting robust, scalable backends powered by machine learning — I bridge the gap between design and data science.
+          </p>
+          <p>
+            My expertise spans across <strong>React, React Native, Next.js, FastAPI, and Python</strong> for full-stack development, combined with hands-on experience in <strong>computer vision (YOLOv11, OpenCV, MediaPipe)</strong>, natural language processing, and large language model integration using frameworks like <strong>LangChain, Ollama, and Hugging Face Transformers</strong>.
+          </p>
+          <p>
+            I specialize in building <strong>cloud-native, multi-tenant SaaS platforms</strong> with real-time capabilities, integrating AI pipelines for OCR, RAG-based chatbots, data curation, and predictive analytics. Whether it's a mobile app, a web platform, or an AI-powered backend — I deliver production-grade solutions.
+          </p>
+          <p>
+            Currently focused on pushing the boundaries of <strong>AI-driven applications</strong> and exploring cutting-edge research in deep learning, transformer architectures, and autonomous systems.
+          </p>
+        </div>
+        <div class="open-to-work">
+          <span class="dot"></span>
+          Open to Work
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SKILLS SECTION
+       ============================================ -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">My Tech Stacks</p>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-desc">A comprehensive toolkit spanning web, mobile, AI/ML, cloud, and DevOps</p>
+      </div>
+
+      <div class="skills-section-inner">
+        <!-- Languages -->
+        <div class="skill-group skill-category" data-animate>
+          <h3 class="skill-group-title skill-category-title">Languages</h3>
+          <div class="skills-columns" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">
+            <div class="skill-badge" data-color="ts" style="--skill-hover-color: #3178C6;">
+              <span class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+              </span>
+              TypeScript
+            </div>
+            <div class="skill-badge" data-color="js" style="--skill-hover-color: #F7DF1E;">
+              <span class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+              </span>
+              JavaScript
+            </div>
+            <div class="skill-badge" data-color="py" style="--skill-hover-color: #3776AB;">
+              <span class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+              </span>
+              Python
+            </div>
+            <div class="skill-badge" data-color="java" style="--skill-hover-color: #E76F00;">
+              <span class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+              </span>
+              Java
+            </div>
+            <div class="skill-badge" data-color="sql" style="--skill-hover-color: #336791;">
+              <span class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="SQL">
+              </span>
+              SQL
+            </div>
+            <div class="skill-badge" data-color="html" style="--skill-hover-color: #E34F26;">
+              <span class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+              </span>
+              HTML5
+            </div>
+            <div class="skill-badge" data-color="css" style="--skill-hover-color: #1572B6;">
+              <span class="skill-icon">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+              </span>
+              CSS3
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Stacks Grid -->
+        <div class="skill-group skill-category" data-animate>
+          <h3 class="skill-group-title skill-category-title">Tech Stacks</h3>
+          <div class="skill-group-columns">
+            <!-- App / Frontend -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">App</div>
+              <div class="skill-badge" data-color="react" style="--skill-hover-color: #61DAFB;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"></span> ReactJs
+              </div>
+              <div class="skill-badge" data-color="next" style="--skill-hover-color: #000000;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"></span> Next.js
+              </div>
+              <div class="skill-badge" data-color="vue" style="--skill-hover-color: #42B883;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"></span> Vue.js
+              </div>
+            </div>
+
+            <!-- UI -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">UI</div>
+              <div class="skill-badge" data-color="mantine" style="--skill-hover-color: #339AF0;">
+                <span class="skill-icon">🎨</span> Mantine
+              </div>
+              <div class="skill-badge" data-color="mui" style="--skill-hover-color: #007FFF;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="MUI"></span> MUI
+              </div>
+              <div class="skill-badge" data-color="tw" style="--skill-hover-color: #06B6D4;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS"></span> TailwindCSS
+              </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">Mobile</div>
+              <div class="skill-badge" data-color="rn" style="--skill-hover-color: #61DAFB;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native"></span> React Native
+              </div>
+              <div class="skill-badge" data-color="expo" style="--skill-hover-color: #000020;">
+                <span class="skill-icon">🚀</span> Expo
+              </div>
+              <div class="skill-badge" data-color="nb" style="--skill-hover-color: #65B741;">
+                <span class="skill-icon">🔧</span> Nativebase
+              </div>
+              <div class="skill-badge" data-color="as" style="--skill-hover-color: #3DDC84;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg" alt="Android Studio"></span> Android Studio
+              </div>
+              <div class="skill-badge" data-color="xc" style="--skill-hover-color: #147EFB;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg" alt="Xcode"></span> Xcode
+              </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">Backend</div>
+              <div class="skill-badge" data-color="fastapi" style="--skill-hover-color: #009688;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"></span> FastAPI
+              </div>
+              <div class="skill-badge" data-color="express" style="--skill-hover-color: #333333;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js"></span> Express.js
+              </div>
+              <div class="skill-badge" data-color="nest" style="--skill-hover-color: #E0234E;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" alt="NestJS"></span> NestJS
+              </div>
+              <div class="skill-badge" data-color="spring" style="--skill-hover-color: #6DB33F;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot"></span> Spring Boot
+              </div>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">Database</div>
+              <div class="skill-badge" data-color="mongo" style="--skill-hover-color: #47A248;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"></span> MongoDB
+              </div>
+              <div class="skill-badge" data-color="pg" style="--skill-hover-color: #336791;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"></span> PostgreSQL
+              </div>
+              <div class="skill-badge" data-color="mysql" style="--skill-hover-color: #4479A1;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></span> MySQL
+              </div>
+              <div class="skill-badge" data-color="redis" style="--skill-hover-color: #DC382D;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"></span> Redis
+              </div>
+              <div class="skill-badge" data-color="duck" style="--skill-hover-color: #FFF000; color: #000 !important;">
+                <span class="skill-icon">🦆</span> DuckDB
+              </div>
+              <div class="skill-badge" data-color="supa" style="--skill-hover-color: #3FCF8E;">
+                <span class="skill-icon">⚡</span> Supabase
+              </div>
+            </div>
+
+            <!-- Data Analysis / AI -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">AI / ML</div>
+              <div class="skill-badge" data-color="pytorch" style="--skill-hover-color: #EE4C2C;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"></span> PyTorch
+              </div>
+              <div class="skill-badge" data-color="tf" style="--skill-hover-color: #FF6F00;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow"></span> TensorFlow
+              </div>
+              <div class="skill-badge" data-color="hf" style="--skill-hover-color: #FFD21E; color: #000 !important;">
+                <span class="skill-icon">🤗</span> Transformers
+              </div>
+              <div class="skill-badge" data-color="sk" style="--skill-hover-color: #F7931E;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" alt="scikit-learn"></span> scikit-learn
+              </div>
+              <div class="skill-badge" data-color="cv" style="--skill-hover-color: #5C3EE8;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV"></span> OpenCV
+              </div>
+              <div class="skill-badge" data-color="mp" style="--skill-hover-color: #0097A7;">
+                <span class="skill-icon">🖐️</span> MediaPipe
+              </div>
+              <div class="skill-badge" data-color="ollama" style="--skill-hover-color: #1a1a1a;">
+                <span class="skill-icon">🦙</span> Ollama
+              </div>
+              <div class="skill-badge" data-color="lc" style="--skill-hover-color: #1C3C3C;">
+                <span class="skill-icon">🔗</span> LangChain
+              </div>
+            </div>
+
+            <!-- Cloud Service -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">Cloud</div>
+              <div class="skill-badge" data-color="aws" style="--skill-hover-color: #FF9900;">
+                <span class="skill-icon">☁️</span> AWS
+              </div>
+              <div class="skill-badge" data-color="vercel" style="--skill-hover-color: #000000;">
+                <span class="skill-icon">▲</span> Vercel
+              </div>
+              <div class="skill-badge" data-color="minio" style="--skill-hover-color: #C72E49;">
+                <span class="skill-icon">📦</span> MinIO / S3
+              </div>
+              <div class="skill-badge" data-color="celery" style="--skill-hover-color: #37814A;">
+                <span class="skill-icon">🔄</span> Celery
+              </div>
+            </div>
+
+            <!-- Tools / OS -->
+            <div class="skill-group-col">
+              <div class="skill-group-col-header">Tools / OS</div>
+              <div class="skill-badge" data-color="docker" style="--skill-hover-color: #2496ED;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></span> Docker
+              </div>
+              <div class="skill-badge" data-color="nginx" style="--skill-hover-color: #009639;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx"></span> Nginx
+              </div>
+              <div class="skill-badge" data-color="linux" style="--skill-hover-color: #FCC624; color: #000 !important;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></span> Linux
+              </div>
+              <div class="skill-badge" data-color="gh" style="--skill-hover-color: #181717;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></span> GitHub
+              </div>
+              <div class="skill-badge" data-color="jupyter" style="--skill-hover-color: #F37626;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="Jupyter"></span> Jupyter
+              </div>
+              <div class="skill-badge" data-color="st" style="--skill-hover-color: #FF4B4B;">
+                <span class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="Streamlit"></span> Streamlit
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PROJECTS SECTION
+       ============================================ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">My Work</p>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">Explore some of my recent work in AI, ML, and full-stack development</p>
+      </div>
+
+      <div class="projects-grid stagger-children">
+        <!-- Project 1: ElectroERP -->
+        <div class="project-card reveal-scale">
+          <div class="project-card-image">
+            <img src="assets/images/projects/electroerp.png" alt="ElectroERP - Cloud-based AI-powered ERP SaaS" loading="lazy">
+            <span class="project-role">Full Stack + AI</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">ElectroERP</h3>
+            <p class="project-card-desc">A cloud-native, multi-tenant AI-powered ERP SaaS designed for small-to-medium retail electronic businesses. Automates multi-store inventory synchronization, supplier billing via OCR, customer support via an intelligent RAG-based chatbot, and GST-compliant POS billing.</p>
+            <div class="project-card-tags">
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">PostgreSQL</span>
+              <span class="project-tag">Redis</span>
+              <span class="project-tag">Celery</span>
+              <span class="project-tag">Docker</span>
+              <span class="project-tag">Ollama</span>
+              <span class="project-tag">OCR</span>
+              <span class="project-tag">RAG</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Picnify -->
+        <div class="project-card reveal-scale">
+          <div class="project-card-image">
+            <img src="assets/images/projects/picnify.png" alt="Picnify - Day-Picnic Booking Marketplace" loading="lazy">
+            <span class="project-role">Full Stack Developer</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Picnify</h3>
+            <p class="project-card-desc">A multi-tenant, day-picnic booking marketplace connecting customers, property hosts, and travel agents. Features secure online payment gateways, automated agent commission ledgers, and an AI-powered live support chat system with real-time agent escalation.</p>
+            <div class="project-card-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Vite</span>
+              <span class="project-tag">Tailwind CSS</span>
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">PhonePe API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Community App -->
+        <div class="project-card reveal-scale">
+          <div class="project-card-image">
+            <img src="assets/images/projects/community.png" alt="Community App - Cross-Platform Mobile Application" loading="lazy">
+            <span class="project-role">Full Stack Developer</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Community App</h3>
+            <p class="project-card-desc">A feature-rich, cross-platform mobile application enabling localized event scheduling, real-time live stream broadcasts, and organization management. Built with a serverless backend and responsive mobile frontend, facilitating secure role-based operations and community financial ledgers.</p>
+            <div class="project-card-tags">
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">Expo</span>
+              <span class="project-tag">Nativewind</span>
+              <span class="project-tag">Tailwind CSS</span>
+              <span class="project-tag">YouTube API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Ayurvedic Engine -->
+        <div class="project-card reveal-scale">
+          <div class="project-card-image">
+            <img src="assets/images/projects/ayurvedic.png" alt="AI-Powered Ayurvedic Culinary Engine" loading="lazy">
+            <span class="project-role">Full Stack + AI</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">AI-Powered Ayurvedic Culinary & Nutrition Engine</h3>
+            <p class="project-card-desc">A state-of-the-art web application combining computer vision, NLP, and real-time weather analytics to recommend hyper-personalized, Ayurvedic-compliant Indian recipes. Scans raw kitchen ingredients using oriented bounding boxes and dynamically drafts customized recipes using LLMs.</p>
+            <div class="project-card-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Streamlit</span>
+              <span class="project-tag">YOLOv11</span>
+              <span class="project-tag">Gemini</span>
+              <span class="project-tag">NER</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: ISL Translation -->
+        <div class="project-card reveal-scale">
+          <div class="project-card-image">
+            <img src="assets/images/projects/isl.png" alt="Real-Time Indian Sign Language Translation System" loading="lazy">
+            <span class="project-role">AI/ML Engineer</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Real-Time Indian Sign Language (ISL) Interpreter</h3>
+            <p class="project-card-desc">A real-time, end-to-end computer vision and deep learning system that translates continuous ISL video feeds into grammatically correct English. Uses a modular multi-stage architecture: MediaPipe Holistic, custom Transformer Encoder with CTC Loss, and a localized Llama-2 LLM for text refinement.</p>
+            <div class="project-card-tags">
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">MediaPipe</span>
+              <span class="project-tag">OpenCV</span>
+              <span class="project-tag">Transformer</span>
+              <span class="project-tag">Llama-2</span>
+              <span class="project-tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: DataCure -->
+        <div class="project-card reveal-scale">
+          <div class="project-card-image">
+            <img src="assets/images/projects/datacure.png" alt="DataCure - AI-Powered Data Curation Pipeline" loading="lazy">
+            <span class="project-role">Full Stack + AI</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">DataCure — AI-Powered Data Curation Pipeline</h3>
+            <p class="project-card-desc">A modular, resource-efficient data curation web application that ingests, preprocesses, deduplicates, and annotates multi-modal datasets (CSV, JSON, images, videos, documents) to prepare training-ready pipelines for CV, NLP, and LLM models.</p>
+            <div class="project-card-tags">
+              <span class="project-tag">NeMo Curator</span>
+              <span class="project-tag">DuckDB</span>
+              <span class="project-tag">Transformers</span>
+              <span class="project-tag">Plotly</span>
+              <span class="project-tag">Streamlit</span>
+              <span class="project-tag">OpenCV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: E-commerce -->
+        <div class="project-card reveal-scale">
+          <div class="project-card-image">
+            <img src="assets/images/projects/ecommerce.png" alt="E-commerce React Native Application" loading="lazy">
+            <span class="project-role">Full Stack Developer</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">E-commerce React Native Application</h3>
+            <p class="project-card-desc">A B2B e-commerce application built with React Native, featuring a custom backend and MongoDB database. Designed for seamless wholesale transactions with a full-fledged platform for businesses to browse, order, and manage products efficiently with real-time performance.</p>
+            <div class="project-card-tags">
+              <span class="project-tag">Expo</span>
+              <span class="project-tag">React</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Socket.io</span>
+              <span class="project-tag">Redis</span>
+              <span class="project-tag">JWT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT SECTION
+       ============================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="contact-title reveal">Let's have a <span class="accent">conversation</span></h2>
+
+      <div class="contact-grid stagger-children">
+        <div class="contact-card reveal-scale">
+          <div class="contact-card-icon">
+            <i data-lucide="mail" style="width:24px;height:24px"></i>
+          </div>
+          <p class="contact-card-label">Email</p>
+          <p class="contact-card-value">
+            <a href="mailto:alimehdinadoliya@gmail.com">alimehdinadoliya@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="contact-card reveal-scale">
+          <div class="contact-card-icon">
+            <i data-lucide="phone" style="width:24px;height:24px"></i>
+          </div>
+          <p class="contact-card-label">Phone</p>
+          <p class="contact-card-value">
+            <a href="tel:+917977000000">+91 7977******</a>
+          </p>
+        </div>
+
+        <div class="contact-card reveal-scale">
+          <div class="contact-card-icon">
+            <i data-lucide="map-pin" style="width:24px;height:24px"></i>
+          </div>
+          <p class="contact-card-label">Location</p>
+          <p class="contact-card-value">Mumbai, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content reveal">
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/ali-mehdi-197a201aa/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://x.com/AliNadoliya" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter / X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+        </div>
+        <p class="footer-copyright">© 2025 Ali Mehdi Nadoliya. All rights reserved.</p>
+        <p class="footer-tagline">Built with passion for <span class="accent">AI</span> and innovation</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i data-lucide="arrow-up" style="width:20px;height:20px"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
