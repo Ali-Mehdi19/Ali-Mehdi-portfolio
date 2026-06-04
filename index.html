@@ -38,6 +38,7 @@
         <li><a href="#about" data-section="about">About</a></li>
         <li><a href="#skills" data-section="skills">Skills</a></li>
         <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#freelance" data-section="freelance">Freelance</a></li>
         <li><a href="#contact" data-section="contact">Contact</a></li>
       </ul>
 
@@ -553,39 +554,133 @@
   </section>
 
   <!-- ============================================
+       FREELANCE AVAILABILITY SECTION
+       ============================================ -->
+  <section class="freelance" id="freelance">
+    <div class="container">
+      <h2 class="freelance-title reveal">Open for <span class="accent">Freelance</span> Engagements</h2>
+      <p class="freelance-subtitle reveal">I partner with startups and companies to architect and build high-performance software solutions.</p>
+
+      <div class="freelance-grid stagger-children">
+        <!-- Service 1: AI Development -->
+        <div class="freelance-card reveal-scale">
+          <div class="freelance-card-icon">
+            <i data-lucide="brain" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="freelance-card-title">AI-Powered Software</h3>
+          <p class="freelance-card-desc">Integrating state-of-the-art LLMs, custom machine learning models, RAG pipelines, computer vision (YOLO/OpenCV), and NLP to build intelligent automated systems.</p>
+          <ul class="freelance-card-features">
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> LLM & RAG Pipelines</li>
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> Computer Vision Solutions</li>
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> AI Agent Development</li>
+          </ul>
+        </div>
+
+        <!-- Service 2: Web Development -->
+        <div class="freelance-card reveal-scale">
+          <div class="freelance-card-icon">
+            <i data-lucide="code-2" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="freelance-card-title">Full-Stack Web Systems</h3>
+          <p class="freelance-card-desc">Architecting robust, cloud-native multi-tenant SaaS platforms, interactive dashboard applications, real-time database backends, and highly scalable RESTful/GraphQL APIs.</p>
+          <ul class="freelance-card-features">
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> React & Next.js Frontends</li>
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> FastAPI & Node.js Backends</li>
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> Cloud & Database Design</li>
+          </ul>
+        </div>
+
+        <!-- Service 3: Mobile Development -->
+        <div class="freelance-card reveal-scale">
+          <div class="freelance-card-icon">
+            <i data-lucide="smartphone" style="width:28px;height:28px"></i>
+          </div>
+          <h3 class="freelance-card-title">Cross-Platform Mobile Apps</h3>
+          <p class="freelance-card-desc">Crafting premium iOS and Android mobile applications using React Native and Expo, featuring offline synchronization, real-time tracking, and fluid user animations.</p>
+          <ul class="freelance-card-features">
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> React Native & Expo Development</li>
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> Offline-First Architecture</li>
+            <li><i data-lucide="check" style="width:16px;height:16px"></i> Smooth Native Animation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Professional Status Banner -->
+      <div class="freelance-status reveal-scale">
+        <div class="status-indicator">
+          <span class="status-dot-pulse"></span>
+          <strong>Current Availability:</strong> Open to new contracts and advisory work
+        </div>
+        <p class="status-desc">Have a project, feature, or proof-of-concept you want to bring to life? Let's discuss your timeline and technical requirements.</p>
+        <a href="#contact" class="btn btn-primary">
+          <i data-lucide="message-square" style="width:18px;height:18px"></i>
+          Discuss Your Project
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        CONTACT SECTION
        ============================================ -->
   <section class="contact" id="contact">
     <div class="container">
       <h2 class="contact-title reveal">Let's have a <span class="accent">conversation</span></h2>
 
-      <div class="contact-grid stagger-children">
-        <div class="contact-card reveal-scale">
-          <div class="contact-card-icon">
-            <i data-lucide="mail" style="width:24px;height:24px"></i>
+      <div class="contact-layout">
+        <!-- Contact details column -->
+        <div class="contact-info stagger-children">
+          <!-- Obfuscated Email Card -->
+          <div class="contact-card reveal-scale">
+            <div class="contact-card-icon">
+              <i data-lucide="mail" style="width:24px;height:24px"></i>
+            </div>
+            <p class="contact-card-label">Email</p>
+            <p class="contact-card-value">
+              <a href="#" class="obfuscated-email" data-user="alimehdinadoliya" data-domain="gmail.com">
+                <span class="loading-text">[Loading email...]</span>
+              </a>
+            </p>
           </div>
-          <p class="contact-card-label">Email</p>
-          <p class="contact-card-value">
-            <a href="mailto:alimehdinadoliya@gmail.com">alimehdinadoliya@gmail.com</a>
-          </p>
+
+          <!-- Location Card -->
+          <div class="contact-card reveal-scale">
+            <div class="contact-card-icon">
+              <i data-lucide="map-pin" style="width:24px;height:24px"></i>
+            </div>
+            <p class="contact-card-label">Location</p>
+            <p class="contact-card-value">Mumbai, India</p>
+          </div>
         </div>
 
-        <div class="contact-card reveal-scale">
-          <div class="contact-card-icon">
-            <i data-lucide="phone" style="width:24px;height:24px"></i>
-          </div>
-          <p class="contact-card-label">Phone</p>
-          <p class="contact-card-value">
-            <a href="tel:+917977000000">+91 7977******</a>
-          </p>
-        </div>
+        <!-- Contact Form Column -->
+        <div class="contact-form-container reveal-scale">
+          <form id="contactForm" class="contact-form">
+            <!-- Web3Forms inputs -->
+            <input type="hidden" name="access_key" value="90732a31-8918-4ebf-879c-6f524fac5900">
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden-field" style="display: none;">
 
-        <div class="contact-card reveal-scale">
-          <div class="contact-card-icon">
-            <i data-lucide="map-pin" style="width:24px;height:24px"></i>
-          </div>
-          <p class="contact-card-label">Location</p>
-          <p class="contact-card-value">Mumbai, India</p>
+            <div class="form-group">
+              <label for="formName">Name</label>
+              <input type="text" id="formName" name="name" required placeholder="Your Name">
+            </div>
+
+            <div class="form-group">
+              <label for="formEmail">Email</label>
+              <input type="email" id="formEmail" name="email" required placeholder="Your Email">
+            </div>
+
+            <div class="form-group">
+              <label for="formMessage">Message</label>
+              <textarea id="formMessage" name="message" rows="5" required placeholder="Your Message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              <i data-lucide="send" style="width:18px;height:18px"></i>
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </div>

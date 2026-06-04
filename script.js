@@ -364,6 +364,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ==========================================
+  // EMAIL OBFUSCATION
+  // ==========================================
+  const obfuscatedEmails = document.querySelectorAll('.obfuscated-email');
+  obfuscatedEmails.forEach(elem => {
+    const user = elem.getAttribute('data-user');
+    const domain = elem.getAttribute('data-domain');
+    if (user && domain) {
+      const email = user + '@' + domain;
+      elem.href = 'mailto:' + email;
+      elem.textContent = email;
+    }
+  });
+
+  // ==========================================
+  // WEB3FORMS AJAX SUBMISSION
+  // ==========================================
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const originalText = submitBtn.innerHTML;
+
+      submitBtn.innerHTML = '<i data-lucide="loader-2" class="animate-spin" style="width:18px;height:18px"></i> Sending...';
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert("Success! Your message has been sent.");
+          contactForm.reset();
+        } else {
+          alert("Error: " + data.message);
+        }
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+      } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+      }
+    });
+  }
+
   // Initial scroll check
   handleScroll();
 });

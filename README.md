@@ -13,7 +13,7 @@
 <!-- Profile Badges -->
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-mehdi-197a201aa/)
 [![Twitter](https://img.shields.io/badge/X_(Twitter)-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/AliNadoliya)
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:alimehdinadoliya@gmail.com)
+[![Contact](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](https://ali-mehdi19.github.io/portfolio-website/#contact)
 [![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
 ![Profile Views](https://komarev.com/ghpvc/?username=alimehdi&style=for-the-badge&color=F97316)
 
@@ -618,8 +618,7 @@ A B2B e-commerce application built with React Native, featuring a custom backend
 
 <br/>
 
-[![Email](https://img.shields.io/badge/📧_alimehdinadoliya@gmail.com-EA4335?style=for-the-badge&logoColor=white)](mailto:alimehdinadoliya@gmail.com)
-[![Phone](https://img.shields.io/badge/📱_+91_7977******-25D366?style=for-the-badge&logoColor=white)](#)
+[![Contact Form](https://img.shields.io/badge/📬_Contact_Form-EA4335?style=for-the-badge&logoColor=white)](https://ali-mehdi19.github.io/portfolio-website/#contact)
 [![Location](https://img.shields.io/badge/📍_Mumbai,_India-4285F4?style=for-the-badge&logoColor=white)](#)
 
 <br/>
