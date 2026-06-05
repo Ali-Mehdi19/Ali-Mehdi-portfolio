@@ -463,10 +463,10 @@ ul {
   position: absolute;
   bottom: 36px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 20px);
   z-index: 4;
   opacity: 0;
-  animation: fadeInUp 0.6s 1.2s ease forwards;
+  animation: fadeInUpCentered 0.6s 1.2s ease forwards;
 }
 
 .hero-greeting {
@@ -609,6 +609,17 @@ ul {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpCentered {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -760,6 +771,7 @@ section {
   background: var(--open-to-work-dot);
   border-radius: 50%;
   position: relative;
+  flex-shrink: 0;
 }
 
 .open-to-work .dot::before {
@@ -898,6 +910,28 @@ section {
   width: 24px;
   height: 24px;
   object-fit: contain;
+}
+
+/* Ensure badges with light brand colors have dark text on hover for contrast */
+.skill-badge[data-color="duck"]:hover,
+.skill-badge[data-color="hf"]:hover,
+.skill-badge[data-color="linux"]:hover,
+.skill-badge[data-color="js"]:hover {
+  color: #10101a !important;
+}
+
+.skill-badge[data-color="duck"]:hover .skill-icon,
+.skill-badge[data-color="hf"]:hover .skill-icon,
+.skill-badge[data-color="linux"]:hover .skill-icon,
+.skill-badge[data-color="js"]:hover .skill-icon {
+  filter: none;
+}
+
+/* Invert black icons in dark mode when not hovered */
+[data-theme="dark"] .skill-badge[data-color="express"] .skill-icon img,
+[data-theme="dark"] .skill-badge[data-color="gh"] .skill-icon img,
+[data-theme="dark"] .skill-badge[data-color="next"] .skill-icon img {
+  filter: brightness(0) invert(1);
 }
 
 /* Scroll-triggered animations */
@@ -1323,6 +1357,7 @@ section {
   border-radius: 50%;
   display: inline-block;
   position: relative;
+  flex-shrink: 0;
 }
 
 .status-dot-pulse::after {
@@ -1584,17 +1619,13 @@ section {
   }
 }
 
-@media (max-width: 768px) {
-  html {
-    font-size: 15px;
-  }
-
-  .navbar-inner {
-    justify-content: space-between;
-  }
-
+@media (max-width: 991px) {
   .hamburger {
     display: flex;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .nav-links {
@@ -1623,8 +1654,21 @@ section {
     padding: 12px 32px;
   }
 
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
   .theme-toggle-wrapper {
-    right: 64px;
+    right: 74px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
   }
 
   .hero-content {
@@ -1669,6 +1713,18 @@ section {
     padding: 0 16px;
   }
 
+  .nav-logo {
+    left: 16px;
+  }
+
+  .hamburger {
+    right: 16px;
+  }
+
+  .theme-toggle-wrapper {
+    right: 64px;
+  }
+
   .hero-name {
     font-size: 2.5rem;
   }
@@ -1680,10 +1736,6 @@ section {
   .hero-cta {
     flex-direction: column;
     align-items: center;
-  }
-
-  .theme-toggle-wrapper {
-    right: 56px;
   }
 
   .theme-toggle-group {
