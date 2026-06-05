@@ -129,6 +129,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Prevent scrolling when mobile menu is open */
+html.menu-open,
+body.menu-open {
+  overflow: hidden !important;
+}
+
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -171,19 +177,26 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--bg-navbar);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
   transition: all 0.4s ease;
   height: 72px;
+}
+
+.navbar-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-navbar);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: -1;
+  transition: all 0.4s ease;
 }
 
 .nav-overlay {
   display: none;
 }
 
-.navbar.scrolled {
+.navbar.scrolled .navbar-bg {
   box-shadow: var(--shadow-md);
 }
 

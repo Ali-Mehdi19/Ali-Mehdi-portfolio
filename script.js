@@ -154,6 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navOverlay) {
       navOverlay.classList.toggle('show', isOpen);
     }
+    document.body.classList.toggle('menu-open', isOpen);
+    document.documentElement.classList.toggle('menu-open', isOpen);
   }
 
   function closeMenu() {
@@ -162,6 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navOverlay) {
       navOverlay.classList.remove('show');
     }
+    document.body.classList.remove('menu-open');
+    document.documentElement.classList.remove('menu-open');
   }
 
   hamburger.addEventListener('click', toggleMenu);
