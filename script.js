@@ -146,18 +146,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const hamburger = document.getElementById('hamburger');
   const navLinksContainer = document.getElementById('navLinks');
+  const navOverlay = document.getElementById('navOverlay');
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinksContainer.classList.toggle('open');
-  });
+  function toggleMenu() {
+    const isOpen = navLinksContainer.classList.toggle('open');
+    hamburger.classList.toggle('active', isOpen);
+    if (navOverlay) {
+      navOverlay.classList.toggle('show', isOpen);
+    }
+  }
+
+  function closeMenu() {
+    hamburger.classList.remove('active');
+    navLinksContainer.classList.remove('open');
+    if (navOverlay) {
+      navOverlay.classList.remove('show');
+    }
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeMenu);
+  }
 
   // Close menu on link click
   navLinksContainer.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinksContainer.classList.remove('open');
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   // ==========================================

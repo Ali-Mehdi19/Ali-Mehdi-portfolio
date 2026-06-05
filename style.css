@@ -178,6 +178,10 @@ ul {
   height: 72px;
 }
 
+.nav-overlay {
+  display: none;
+}
+
 .navbar.scrolled {
   box-shadow: var(--shadow-md);
 }
@@ -1628,37 +1632,83 @@ section {
     transform: translateY(-50%);
   }
 
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    z-index: 999;
+    pointer-events: none;
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+  }
+
+  .nav-overlay.show {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    pointer-events: auto;
+  }
+
   .nav-links {
     position: fixed;
-    top: 72px;
-    left: 0;
+    top: 0;
     right: 0;
     bottom: 0;
-    background: var(--bg-primary);
+    width: 280px;
+    max-width: 80vw;
+    background: #09090d; /* solid dark background */
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    opacity: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 96px 24px 24px;
+    gap: 10px;
+    transform: translateX(100%);
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 1000;
   }
 
   .nav-links.open {
-    opacity: 1;
+    transform: translateX(0);
     visibility: visible;
-  }
-
-  .nav-links a {
-    font-size: 1.2rem;
-    padding: 12px 32px;
   }
 
   .nav-links li {
     width: 100%;
-    text-align: center;
+    text-align: left;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 14px 20px;
+    color: #c8cdd5;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-links a.active {
+    color: var(--accent-blue-light);
+    background: rgba(59, 130, 246, 0.1);
+    font-weight: 600;
+  }
+
+  /* Disable underline active state in mobile sidebar */
+  .nav-links a::after {
+    display: none;
   }
 
   .theme-toggle-wrapper {
